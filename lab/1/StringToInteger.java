@@ -15,9 +15,10 @@
 	* This class implements the conversion of given alphabet string into integer numbers
 	* 
 	* Objective: a to z or A to Z to be mapped from 0 to 25 with space as 26
+	*
+	* Output: Please view at the end of the file. (You can also verify the output at "str2intOutput.txt" file)
 	*/
 	
-	import java.util.Scanner;
 	import java.util.*;
 	
 	public class StringToInteger {
@@ -32,29 +33,27 @@
 		public static void main(String[] args){
 			Scanner scan = new Scanner(System.in);
 			String str;
-			int intStr;
 			
 			while(scan.hasNextLine()){
 				str = scan.nextLine();
 				str = str.toUpperCase();
-				//System.out.println(str.toUpperCase());
-				
-				/*
-				for(int i=0; i<str.length(); i++){
-					intStr = ((int)str.toCharArray()[i] - TOKEN_65);
-					if(intStr < 0){
-						System.out.print("26 ");						
-					} else {
-						System.out.print(intStr + " ");
-					}
-					// System.out.print(((int)str.toCharArray()[i] - TOKEN_65) + " ");
-				}
-				*/
 				System.out.print(Arrays.toString(str2int(str)));
 				System.out.println();
 			}			
 			scan.close();
 		}
+		
+		/*
+		* str2int
+		*
+		* This function receives a string of plainText corresponding to a line of input
+		* and returns the corresponding numbers as an array of integers.
+		*
+		* Parameters:
+		* 	plainText: the string value that holds the desired string value to be numbers-converted correspondingly
+		*
+		* Return value: the array of corresponding integers of the received string plainText
+		*/
 		
 		public static int[] str2int(String plainText){
 			int[] intStr = new int[plainText.length()];
@@ -63,13 +62,10 @@
 			for(int i=0; i<plainText.length(); i++){
 				intString = ((int)plainText.toCharArray()[i] - TOKEN_65);
 				if(intString < 0){
-					// System.out.print("26 ");						
 					intStr[i] += 26;
 				} else {
-					// System.out.print(intStr + " ");
 					intStr[i] += intString;
 				}
-				// System.out.print(((int)str.toCharArray()[i] - TOKEN_65) + " ");
 			}			
 			return intStr;
 		}
