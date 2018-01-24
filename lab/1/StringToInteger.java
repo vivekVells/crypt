@@ -18,6 +18,7 @@
 	*/
 	
 	import java.util.Scanner;
+	import java.util.*;
 	
 	public class StringToInteger {
 		// Static Global Constant Variable TOKEN_65 used 
@@ -30,18 +31,83 @@
 		
 		public static void main(String[] args){
 			Scanner scan = new Scanner(System.in);
-			String str = scan.nextLine();
+			String str;
+			int intStr;
 			
-			System.out.println("Received String: " + str);
-			
+			while(scan.hasNextLine()){
+				str = scan.nextLine();
+				str = str.toUpperCase();
+				//System.out.println(str.toUpperCase());
+				
+				/*
+				for(int i=0; i<str.length(); i++){
+					intStr = ((int)str.toCharArray()[i] - TOKEN_65);
+					if(intStr < 0){
+						System.out.print("26 ");						
+					} else {
+						System.out.print(intStr + " ");
+					}
+					// System.out.print(((int)str.toCharArray()[i] - TOKEN_65) + " ");
+				}
+				*/
+				System.out.print(Arrays.toString(str2int(str)));
+				System.out.println();
+			}			
 			scan.close();
+		}
+		
+		public static int[] str2int(String plainText){
+			int[] intStr = new int[plainText.length()];
+			int intString;
+			
+			for(int i=0; i<plainText.length(); i++){
+				intString = ((int)plainText.toCharArray()[i] - TOKEN_65);
+				if(intString < 0){
+					// System.out.print("26 ");						
+					intStr[i] += 26;
+				} else {
+					// System.out.print(intStr + " ");
+					intStr[i] += intString;
+				}
+				// System.out.print(((int)str.toCharArray()[i] - TOKEN_65) + " ");
+			}			
+			return intStr;
 		}
 		
 	}
 	
-	
-	
-	
-
-
-
+	/*
+	* Program Objective:
+	* Write a program that takes as input a string from ‘a’ to ‘z’ or ‘A’ to ‘Z’ and transforms it to integers from 0 to 25. 
+	* If you encounter a space, it should be mapped to 26. Create a method with the following 
+	*	signature int[] str2int(Strin plainText) that receives a string of plaintext corresponding to a line of input, 
+	* and returns the corresponding numbers as an array of integers.
+	*  
+	* Input:
+	* input.txt => contents inside this text file are in the following order
+	* abcdefghijklmnopqrstuvwxyz
+	* a to z
+	* Hello
+	* Cryptography is fun
+	* A
+	* car usually
+	* has four tires
+	*
+	* Output:
+	* Vivek-Pc@kev MINGW64 /e/Marist/Semester2/Cryptography/lab/1 (master)
+	* $ javac StringToInteger.java
+  *
+	* Vivek-Pc@kev MINGW64 /e/Marist/Semester2/Cryptography/lab/1 (master)
+	* $ java StringToInteger < input.txt
+	* [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
+	* [0, 26, 19, 14, 26, 25]
+	* [7, 4, 11, 11, 14]
+	* [2, 17, 24, 15, 19, 14, 6, 17, 0, 15, 7, 24, 26, 8, 18, 26, 5, 20, 13]
+	* [0]
+	* [2, 0, 17, 26, 20, 18, 20, 0, 11, 11, 24]
+	* [7, 0, 18, 26, 5, 14, 20, 17, 26, 19, 8, 17, 4, 18]
+  * 
+	* Vivek-Pc@kev MINGW64 /e/Marist/Semester2/Cryptography/lab/1 (master)
+	* $
+	*
+	*/

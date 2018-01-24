@@ -1,1 +1,7 @@
-Hello World
+abcdefghijklmnopqrstuvwxyz
+a to z
+Hello
+Cryptography is fun
+A
+car usually
+has four tires
