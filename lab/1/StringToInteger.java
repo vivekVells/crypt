@@ -19,14 +19,10 @@
 * Output: Please view at the end of the file. (You can also verify the output at "str2intOutput.txt" file)
 */
 
-<<<<<<< HEAD
 // importing required java util packages
 // Scanner pkg to use Standard Sys input & Arrays pkg to print the array values as string
 import java.util.Scanner;
 import java.util.Arrays;
-=======
-import java.util.*;
->>>>>>> b50767e8587c382306b6eb55ffff89fb29af8533
 
 public class StringToInteger {
 	// Static Global Constant Variable TOKEN_65 used 
@@ -36,19 +32,11 @@ public class StringToInteger {
 	// 		(i.e.) (ASCII)"CAR"	- TOKEN_65^(times_the_alphabets_length_individually) 
 	// 								=> 67-65 65-65 82-65 => 2 0 17 
 	static final int TOKEN_65 = 65;
-<<<<<<< HEAD
 	
 	public static void main(String[] args){
 		Scanner scan = new Scanner(System.in);
 		String str;
 		
-=======
-
-	public static void main(String[] args){
-		Scanner scan = new Scanner(System.in);
-		String str;
-
->>>>>>> b50767e8587c382306b6eb55ffff89fb29af8533
 		while(scan.hasNextLine()){
 			str = scan.nextLine();
 			str = str.toUpperCase();
@@ -57,7 +45,7 @@ public class StringToInteger {
 		}			
 		scan.close();
 	}
-
+	
 	/*
 	* str2int
 	*
@@ -69,19 +57,11 @@ public class StringToInteger {
 	*
 	* Return value: the array of corresponding integers of the received string plainText
 	*/
-<<<<<<< HEAD
 	
 	public static int[] str2int(String plainText){
 		int[] intStr = new int[plainText.length()];
 		int intString;
 		
-=======
-
-	public static int[] str2int(String plainText){
-		int[] intStr = new int[plainText.length()];
-		int intString;
-
->>>>>>> b50767e8587c382306b6eb55ffff89fb29af8533
 		for(int i=0; i<plainText.length(); i++){
 			intString = ((int)plainText.toCharArray()[i] - TOKEN_65);
 			if(intString < 0){
@@ -92,11 +72,7 @@ public class StringToInteger {
 		}			
 		return intStr;
 	}
-<<<<<<< HEAD
 	
-=======
-
->>>>>>> b50767e8587c382306b6eb55ffff89fb29af8533
 }
 
 /*
@@ -133,8 +109,4 @@ public class StringToInteger {
 * Vivek-Pc@kev MINGW64 /e/Marist/Semester2/Cryptography/lab/1 (master)
 * $
 *
-<<<<<<< HEAD
 */
-=======
-*/
->>>>>>> b50767e8587c382306b6eb55ffff89fb29af8533
