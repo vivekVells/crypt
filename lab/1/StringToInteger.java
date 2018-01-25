@@ -32,47 +32,48 @@ public class StringToInteger {
   //  (i.e.) (ASCII)"CAR"	- TOKEN_65^(times_the_alphabets_length_individually) 
 	//         => 67-65 65-65 82-65 => 2 0 17 
   static final int TOKEN_65 = 65;
-  
+
   public static void main(String[] args){
     Scanner scan = new Scanner(System.in);
-	  String str;
+    String str;
+
+    while(scan.hasNextLine()){
+      str = scan.nextLine();
+      str = str.toUpperCase();
+      System.out.print(Arrays.toString(str2int(str)));
+      System.out.println();
+    }			
+    scan.close();
+  }
+
+  /*
+  * str2int
+  *
+  * This function receives a string of plainText corresponding to a line of input
+  * and returns the corresponding numbers as an array of integers.
+  *
+  * Parameters:
+  * 	plainText: the string value that holds the desired string value to be numbers-converted correspondingly
+  *
+  * Return value: the array of corresponding integers of the received string plainText
+  */
+
+  public static int[] str2int(String plainText){
+    int[] intStr = new int[plainText.length()];
+    int intString;
+
+    for(int i=0; i<plainText.length(); i++){
+      intString = ((int)plainText.toCharArray()[i] - TOKEN_65);
+        if(intString < 0){
+          intStr[i] += 26;
+        } else {
+          intStr[i] += intString;
+        }
+    }
 	
-	  while(scan.hasNextLine()){
-		  str = scan.nextLine();
-		  str = str.toUpperCase();
-		  System.out.print(Arrays.toString(str2int(str)));
-		  System.out.println();
-		}			
-		scan.close();
-	}
-	
-	/*
-	* str2int
-	*
-	* This function receives a string of plainText corresponding to a line of input
-	* and returns the corresponding numbers as an array of integers.
-	*
-	* Parameters:
-	* 	plainText: the string value that holds the desired string value to be numbers-converted correspondingly
-	*
-	* Return value: the array of corresponding integers of the received string plainText
-	*/
-	
-	public static int[] str2int(String plainText){
-		int[] intStr = new int[plainText.length()];
-		int intString;
-		
-		for(int i=0; i<plainText.length(); i++){
-			intString = ((int)plainText.toCharArray()[i] - TOKEN_65);
-			if(intString < 0){
-				intStr[i] += 26;
-			} else {
-				intStr[i] += intString;
-			}
-		}			
-		return intStr;
-	}
-	
+    return intStr;
+  }
+
 }
 
 /*
