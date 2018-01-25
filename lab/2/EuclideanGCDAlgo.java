@@ -9,7 +9,7 @@
 */
 
 /*
-*	StringToInteger
+*	EuclideanGCDAlgo
 *	
 * This class implements Euclidean algorithm to find GCD of given numbers
 * 
