@@ -25,23 +25,23 @@ import java.util.Scanner;
 import java.util.Arrays;
 
 public class StringToInteger {
-	// Static Global Constant Variable TOKEN_65 used 
-	// 	to reduce from the converted alphabet ascii value to obtain 
-	// 	objective of this program.
-	// for e.g.: "CAR" is converted into { 2 0 17 } 
-	// 		(i.e.) (ASCII)"CAR"	- TOKEN_65^(times_the_alphabets_length_individually) 
-	// 								=> 67-65 65-65 82-65 => 2 0 17 
-	static final int TOKEN_65 = 65;
+  // Static Global Constant Variable TOKEN_65 used 
+  //  to reduce from the converted alphabet ascii value to obtain 
+  //  objective of this program.
+  // for e.g.: "CAR" is converted into { 2 0 17 } 
+  //  (i.e.) (ASCII)"CAR"	- TOKEN_65^(times_the_alphabets_length_individually) 
+	//         => 67-65 65-65 82-65 => 2 0 17 
+  static final int TOKEN_65 = 65;
+  
+  public static void main(String[] args){
+    Scanner scan = new Scanner(System.in);
+	  String str;
 	
-	public static void main(String[] args){
-		Scanner scan = new Scanner(System.in);
-		String str;
-		
-		while(scan.hasNextLine()){
-			str = scan.nextLine();
-			str = str.toUpperCase();
-			System.out.print(Arrays.toString(str2int(str)));
-			System.out.println();
+	  while(scan.hasNextLine()){
+		  str = scan.nextLine();
+		  str = str.toUpperCase();
+		  System.out.print(Arrays.toString(str2int(str)));
+		  System.out.println();
 		}			
 		scan.close();
 	}
