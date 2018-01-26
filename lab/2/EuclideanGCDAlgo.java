@@ -96,6 +96,7 @@ public class EuclideanGCDAlgo {
 
 /*
 * Program Objective:
+* Use Euclidean Algo - GCD Implement
 *  
 * Input:
 * (refer the InputEuclideanGCDAlgo.txt file). But inside it, the followings are available
