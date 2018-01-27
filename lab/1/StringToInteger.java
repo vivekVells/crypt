@@ -10,7 +10,7 @@
 */
 
 /*
-*	StringToInteger
+* StringToInteger
 *	
 * This class implements the conversion of given alphabet string into integer numbers
 * 
@@ -30,10 +30,10 @@ public class StringToInteger {
   //  objective of this program.
   // for e.g.: "CAR" is converted into { 2 0 17 } 
   //  (i.e.) (ASCII)"CAR"	- TOKEN_65^(times_the_alphabets_length_individually) 
-	//         => 67-65 65-65 82-65 => 2 0 17 
+  //  => 67-65 65-65 82-65 => 2 0 17 
   static final int TOKEN_65 = 65;
 
-  public static void main(String[] args){
+  public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
     String str;
 
@@ -58,19 +58,18 @@ public class StringToInteger {
   * Return value: the array of corresponding integers of the received string plainText
   */
 
-  public static int[] str2int(String plainText){
+  public static int[] str2int(String plainText) {
     int[] intStr = new int[plainText.length()];
     int intString;
 
-    for(int i=0; i<plainText.length(); i++){
+    for(int i=0; i<plainText.length(); i++) {
       intString = ((int)plainText.toCharArray()[i] - TOKEN_65);
         if(intString < 0){
           intStr[i] += 26;
         } else {
           intStr[i] += intString;
         }
-    }
-	
+    }	
     return intStr;
   }
 
