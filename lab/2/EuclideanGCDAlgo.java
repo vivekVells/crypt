@@ -99,7 +99,8 @@ public class EuclideanGCDAlgo {
       long aValueRetained = a, bValueRetained = b;
       System.out.println("\nCalculation for GCD(" + aValueRetained + "," + bValueRetained +"): ");
       
-      // to solve the program with and without recursion, the long euclicdAlg(long a, long b) function as per the program instruction was // being changed to euclicdAlgWithoutRecursion(long a, long b) and euclicdAlgWithRecursion(long a, long b)
+      // to solve the program with and without recursion, the long euclicdAlg(long a, long b) function as per the program instruction was 
+      // being changed to euclicdAlgWithoutRecursion(long a, long b) and euclicdAlgWithRecursion(long a, long b)
       // without recursion
       System.out.println("\nWithout Recursion: GCD(" + aValueRetained + "," + bValueRetained + ") = " + euclicdAlgWithoutRecursion(a,b));
 			
