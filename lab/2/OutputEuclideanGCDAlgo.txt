@@ -1,10 +1,30 @@
-maristuser@LBESCRIP-35 MINGW64 ~/Desktop/MSCS630Lab2
+Vivek-Pc@kev MINGW64 /e/Marist/Semester2/Cryptography/lab/2 (master)
 $ javac EuclideanGCDAlgo.java
 
-maristuser@LBESCRIP-35 MINGW64 ~/Desktop/MSCS630Lab2
+Vivek-Pc@kev MINGW64 /e/Marist/Semester2/Cryptography/lab/2 (master)
 $ java EuclideanGCDAlgo < InputEuclideanGCDAlgo.txt
 
 GCD calculation using Euclidean Algorithm
+
+Calculation for GCD(75,148):
+Quotient & remainder: 0  75
+Quotient & remainder: 1  73
+Quotient & remainder: 1  2
+Quotient & remainder: 36         1
+Quotient & remainder: 2  0
+
+Without Recursion: GCD(75,148) = 1
+With Recursion   : GCD(75,148) = 1
+-----------------------------------------------------
+
+
+Calculation for GCD(75,75):
+Quotient & remainder: 1  0
+
+Without Recursion: GCD(75,75) = 75
+With Recursion   : GCD(75,75) = 75
+-----------------------------------------------------
+
 
 Calculation for GCD(100,74):
 Quotient & remainder: 1  26
@@ -12,7 +32,9 @@ Quotient & remainder: 2  22
 Quotient & remainder: 1  4
 Quotient & remainder: 5  2
 Quotient & remainder: 2  0
-GCD(100,74) = 2
+
+Without Recursion: GCD(100,74) = 2
+With Recursion   : GCD(100,74) = 2
 -----------------------------------------------------
 
 
@@ -20,7 +42,9 @@ Calculation for GCD(1071,462):
 Quotient & remainder: 2  147
 Quotient & remainder: 3  21
 Quotient & remainder: 7  0
-GCD(1071,462) = 21
+
+Without Recursion: GCD(1071,462) = 21
+With Recursion   : GCD(1071,462) = 21
 -----------------------------------------------------
 
 
@@ -29,9 +53,11 @@ Quotient & remainder: 1  73
 Quotient & remainder: 1  2
 Quotient & remainder: 36         1
 Quotient & remainder: 2  0
-GCD(148,75) = 1
+
+Without Recursion: GCD(148,75) = 1
+With Recursion   : GCD(148,75) = 1
 -----------------------------------------------------
 
 
-maristuser@LBESCRIP-35 MINGW64 ~/Desktop/MSCS630Lab2
+Vivek-Pc@kev MINGW64 /e/Marist/Semester2/Cryptography/lab/2 (master)
 $
