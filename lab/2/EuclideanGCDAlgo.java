@@ -9,7 +9,7 @@
 */
 
 /*
-*	EuclideanGCDAlgo
+* EuclideanGCDAlgo
 *	
 * This class implements Euclidean algorithm to find GCD of given numbers
 * 
@@ -33,7 +33,7 @@ public class EuclideanGCDAlgo {
   *
   * Return: returns quotient and remainder
   */
-  public static long[] getQuotientRemainder(long a, long b){
+  public static long[] getQuotientRemainder(long a, long b) {
     long[] tempQuotientRemainder = new long[2];
     tempQuotientRemainder[0] = a/b;
     tempQuotientRemainder[1] = a%b;
@@ -41,58 +41,57 @@ public class EuclideanGCDAlgo {
   }
 
   /*
-	*euclicdAlgWithoutRecursion 
-	* 
-	* This function returns the GCD calculation of given long args using euclicdAlgorithm without recursion method
-	* 
-	* Parameters: long arg a, long arg b
-	* 
-	* Return: returns gcd of any given positive long numbers 
-	*/
-	public static long euclicdAlgWithoutRecursion(long a, long b){
+  * euclicdAlgWithoutRecursion 
+  * 
+  * This function returns the GCD calculation of given long args using euclicdAlgorithm without recursion method
+  * 
+  * Parameters: long arg a, long arg b
+  * 
+  * Return: returns gcd of any given positive long numbers 
+  */
+  public static long euclicdAlgWithoutRecursion(long a, long b) {
     long[] quotientRemainder = new long[2];
     // this loop will execute until the remainder equals 0
     do{
       quotientRemainder = getQuotientRemainder(a,b);
       System.out.println("Quotient & remainder: " + quotientRemainder[0] + "\t " + quotientRemainder[1]);
-      
-			// this will take care of a < b situation and if that happens, the swap among a & b value done such that a >= b
-      if(quotientRemainder[1] != 0){
+      // this will take care of a < b situation and if that happens, the swap among a & b value done such that a >= b
+      if(quotientRemainder[1] != 0) {
         a = b;
         b = quotientRemainder[1];
-			}
-		}while(quotientRemainder[1] != 0);
-		return b;
-	}
+      }
+    }while(quotientRemainder[1] != 0);
+    return b;
+  }
 
   /*
-	*euclicdAlgWithRecursion 
-	* 
-	* This function returns the GCD calculation of given long args using euclicdAlgorithm with recursion method
-	* 
-	* Parameters: long arg a, long arg b
-	* 
-	* Return: returns gcd of any given positive long numbers 
-	*/	
-	public static long euclicdAlgWithRecursion(long a, long b) {
-		long[] quotientRemainder = new long[2];
-		quotientRemainder = getQuotientRemainder(a,b);
-		
-		if(quotientRemainder[1] != 0){
-			a = b;
-			b = quotientRemainder[1];
-			return euclicdAlgWithRecursion(a,b);
-		}else{
-			return b;
-		}
-	}
+  *euclicdAlgWithRecursion 
+  * 
+  * This function returns the GCD calculation of given long args using euclicdAlgorithm with recursion method
+  * 
+  * Parameters: long arg a, long arg b
+  * 
+  * Return: returns gcd of any given positive long numbers 
+  */	
+  public static long euclicdAlgWithRecursion(long a, long b) {
+    long[] quotientRemainder = new long[2];
+    quotientRemainder = getQuotientRemainder(a,b);
 	
-  public static void main(String[] args){
+    if(quotientRemainder[1] != 0) {
+      a = b;
+      b = quotientRemainder[1];
+      return euclicdAlgWithRecursion(a,b);
+    }else {
+      return b;
+    }
+  }
+	
+  public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
 
     System.out.println("\nGCD calculation using Euclidean Algorithm");
 
-    while(scan.hasNextLine()){
+    while(scan.hasNextLine()) {
       long a = scan.nextInt(), b = scan.nextInt();
 
       // I am sure there is some better way to retain the initial value of a and b. 
@@ -100,20 +99,18 @@ public class EuclideanGCDAlgo {
       long aValueRetained = a, bValueRetained = b;
       System.out.println("\nCalculation for GCD(" + aValueRetained + "," + bValueRetained +"): ");
       
-			// to solve the program with and without recursion, the long euclicdAlg(long a, long b) function as per the program instruction was // being changed to euclicdAlgWithoutRecursion(long a, long b) and euclicdAlgWithRecursion(long a, long b)
+      // to solve the program with and without recursion, the long euclicdAlg(long a, long b) function as per the program instruction was // being changed to euclicdAlgWithoutRecursion(long a, long b) and euclicdAlgWithRecursion(long a, long b)
+      // without recursion
+      System.out.println("\nWithout Recursion: GCD(" + aValueRetained + "," + bValueRetained + ") = " + euclicdAlgWithoutRecursion(a,b));
 			
-			// without recursion
-			System.out.println("\nWithout Recursion: GCD(" + aValueRetained + "," + bValueRetained + ") = " + euclicdAlgWithoutRecursion(a,b));
-			
-			// with recursion
-			System.out.println("With Recursion   : GCD(" + aValueRetained + "," + bValueRetained + ") = " + euclicdAlgWithRecursion(a,b));
+      // with recursion
+      System.out.println("With Recursion   : GCD(" + aValueRetained + "," + bValueRetained + ") = " + euclicdAlgWithRecursion(a,b));
 			
       System.out.println("-----------------------------------------------------\n");
       scan.nextLine();
    }
-	 scan.close();
-	}
-	
+   scan.close();
+  }
 }
 
 /*
@@ -167,7 +164,7 @@ public class EuclideanGCDAlgo {
 * -----------------------------------------------------
 
 
-*	Calculation for GCD(1071,462):
+* Calculation for GCD(1071,462):
 * Quotient & remainder: 2  147
 * Quotient & remainder: 3  21
 * Quotient & remainder: 7  0
