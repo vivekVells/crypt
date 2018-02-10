@@ -1,0 +1,17 @@
+Vivek-Pc@kev MINGW64 /e/Marist/Semester2/Cryptography/lab/2 (master)
+$ javac ExtendedEuclideanGCDAlgo.java
+
+Vivek-Pc@kev MINGW64 /e/Marist/Semester2/Cryptography/lab/2 (master)
+$ java ExtendedEuclideanGCDAlgo < ExtenEuclidInput.txt
+gcd(a,b) = aX + bY
+d = gcd( 148,75,) = 1 ;x = 37 ;y = -73
+
+gcd(a,b) = aX + bY
+d = gcd( 1155,862,) = 1 ;x = 203 ;y = -272
+
+gcd(a,b) = aX + bY
+d = gcd( 240,46,) = 2 ;x = -9 ;y = 47
+
+
+Vivek-Pc@kev MINGW64 /e/Marist/Semester2/Cryptography/lab/2 (master)
+$
