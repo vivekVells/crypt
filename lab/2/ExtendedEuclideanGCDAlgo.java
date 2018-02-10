@@ -23,7 +23,7 @@ public class ExtendedEuclideanGCDAlgo {
   public static Scanner scan = new Scanner(System.in);
 	
   /**
-  * arrayCopy			Performs the shallow copy of the given array args
+  * arrayCopy		Performs the shallow copy of the given array args
   * 
   * @param source
   * @param dest
@@ -37,7 +37,7 @@ public class ExtendedEuclideanGCDAlgo {
   }
 
   /**
-  * euclidAlgExt			Performs the extended euclidean Algorithm of finding the gcd of the numbers along with the greatest common divisor of two positive integers a and b
+  * euclidAlgExt	Performs the extended euclidean Algorithm of finding the gcd of the numbers along with the greatest common divisor of two positive integers a and b
   * 			
   * @param a
   * @param b
@@ -61,7 +61,7 @@ public class ExtendedEuclideanGCDAlgo {
   }
 	
   /**
-  * main			main driver of this program
+  * main		main driver of this program
   * 
   * @param args
   */
