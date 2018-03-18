@@ -1,0 +1,21 @@
+18 pts
+
+Vivek,
+
+About your programs...
+
+Functionality
+
+- The output does not follow instructions given in handout. 
+
+Please make sure you read the problems well; follow instructions.
+
+
+Style Check
+
+- All programs follow the style guidelines. Good job!
+
+
+Peace,
+
+- Dr. Rivas
