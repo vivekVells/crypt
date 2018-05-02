@@ -32,7 +32,7 @@ public class Driver {
 			//det3 = (A[1][0] * A[2][1] - A[2][0] * A[1][1]);
 			det3 = (A[i-1][j-2] * A[i][j-1] - A[i][j-2] * A[i-1][j-1]);
 			System.out.println("det(A[0][2]): " + det3);
-			return det1 - det2 + det3;
+			return A[i-2][j-2] * det1 - A[i-2][j-1] * det2 + A[i-2][j] * det3;
 		}
 		return 0;
 	}
@@ -67,6 +67,7 @@ maristuser@LBESCRIP-36 MINGW64 ~/Desktop/secAlgo/github/lab/3 (master)
 $ java Driver
 3
 7 5 2 0 6 4 8 2 5
+0
 3det(A[0][0]): 22
 det(A[0][1]): -32
 det(A[0][2]): -48
