@@ -25,16 +25,18 @@ public class DriverAES {
     int index = 0;
 
     while(scan.hasNextLine() && !(input = scan.nextLine()).equals("")) {
-          sHexSkey[index] = input.trim();
-          if(index == 1) {
-            break;
-          }
-          index++;
+      sHexSkey[index] = input.trim();
+      if(index == 1) {
+        break;
+      }
+      index++;
     }
+    
     System.out.println("Input: ");
     System.out.println(sHexSkey[0]);
     System.out.println(sHexSkey[1]);
     System.out.println("Output:");
+    
     if (sHexSkey.length == 2){
       aesCipherObject.prep(sHexSkey[0],sHexSkey[1]);
     }else{
