@@ -1,0 +1,58 @@
+
+# Password Matching using the SHA256 hashing algorithm
+# Using the SHA256 hashing algorithm to do secure hashing
+
+E:\kevDev\ProjectWorks\PresentationEvaluationTool\github\design>python
+Python 3.6.5 (v3.6.5:f59c0932b4, Mar 28 2018, 16:07:46) [MSC v.1900 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import hashlib
+>>> student_username = "vivek@marist.edu"
+>>> student_password = "mypassword"
+>>> password_stored_in_db = hashlib.sha256(student_password.encode('UTF-8')).hexdigest()
+>>> print("Password to be stored in DB: " + password_stored_in_db)
+Password to be stored in DB: 89e01536ac207279409d4de1e5253e01f4a1769e696db0d6062ca9b8f56767c8
+>>>
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+# AES encryption and decryption over the data 
+# Using the pyaes secured algorithm to do secure encryption & decryption
+
+>>>
+>>> import pyaes
+
+# using the secret key for encryption
+>>> key = "mykeyissecretkey".encode('UTF-8')
+>>> len(key)
+16
+
+# AES object using CTR mode Encryption
+>>> aesencryption_object = pyaes.AESModeOfOperationCTR(key)
+>>> plaintext_data = "This is the plain text data to be encrypted"
+>>> ciphertext_to_be_stored_in_db = aesencryption_object.encrypt(plaintext_data)
+>>>
+>>> print("aesencryption_object: " + str(aesencryption_object))
+aesencryption_object: <pyaes.aes.AESModeOfOperationCTR object at 0x033F3C90>
+>>> print("plaintext_data: " + plaintext_data)
+plaintext_data: This is the plain text data to be encrypted
+
+# Note the ciphertext here. This will be stored in the db
+>>> print("ciphertext_to_be_stored_in_db: " + str(ciphertext_to_be_stored_in_db))
+ciphertext_to_be_stored_in_db: b's\xad/>A\xbd\x1bO\x7f\x9b\x1a\n w\xd2\xebe\xaa\xec\xf6\x15\xd3v\x17\xb6\xdc\xfb\xb2\r&g\x18J\xb0J\x9a\xc4\xc8\x07\x99\xce\x9d\x01'
+>>>
+>>>
+
+# AES object using CTR mode Decryption
+>>> aesdecryption_object = pyaes.AESModeOfOperationCTR(key)
+>>> decrypted_data_from_ciphertext_in_db = aesdecryption_object.decrypt(ciphertext_to_be_stored_in_db)
+>>> print("aesdecryption_object: " + str(aesdecryption_object))
+aesdecryption_object: <pyaes.aes.AESModeOfOperationCTR object at 0x033FC170>
+>>> print("decrypted_data_from_ciphertext_in_db: " + str(decrypted_data_from_ciphertext_in_db))
+decrypted_data_from_ciphertext_in_db: b'This is the plain text data to be encrypted'
+
+# Note the decrypted ciphertext. This will be retrieved back and processed accordingly using the secret key
+>>> print("data which will be decrypted and processed: " + decrypted_data_from_ciphertext_in_db.decode())
+data which will be decrypted and processed: This is the plain text data to be encrypted
+>>>
+
+----------------------------------------------------------------------------------------------------------------------------------
