@@ -1,0 +1,22 @@
+E:\Marist\Semester2\crypt\vivek\github\lab\3\CoMatrixDeterminant>javac CoMatrixDeterminant.java
+
+E:\Marist\Semester2\crypt\vivek\github\lab\3\CoMatrixDeterminant>java CoMatrixDeterminant < input1.txt
+modulo: 12 || len: 2
+3 2
+2 3
+cofModDet: 5
+
+E:\Marist\Semester2\crypt\vivek\github\lab\3\CoMatrixDeterminant>java CoMatrixDeterminant < input2.txt
+modulo: 3 || len: 2
+1 2
+9 8
+cofModDet: 2
+
+E:\Marist\Semester2\crypt\vivek\github\lab\3\CoMatrixDeterminant>java CoMatrixDeterminant < input3.txt
+modulo: 9 || len: 3
+7 5 2
+0 6 4
+8 2 5
+cofModDet: 2
+
+E:\Marist\Semester2\crypt\vivek\github\lab\3\CoMatrixDeterminant>
